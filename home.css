@@ -63,7 +63,7 @@ header h1 {
 /* Sidebar */
 aside {
     width: 20%;
-    background: url(./img/logo.jpg) no-repeat center center/cover;
+    background: black;
     padding: 1.5rem;
     border-right: 3px solid #00ff7f;
     position: relative;
