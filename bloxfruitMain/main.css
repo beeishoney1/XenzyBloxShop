@@ -190,15 +190,15 @@ aside li:hover a {
 }
 
 .category-item {
-    /* background: #1a1d28; */
     border-radius: 5px;
     transition: background 0.2s ease;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0;
-    height: 200px; /* Fixed height for consistent card size */
+    padding: 10px;
+    height: 220px; /* Adjusted height for new structure */
+    background: #1a1d28;
 }
 
 .category-item::before {
@@ -207,10 +207,9 @@ aside li:hover a {
     top: 0;
     left: 0;
     width: 100%;
-    height: 50%; /* Border covers only the top half (image) before hover */
+    height: 100%; /* Border covers the entire item */
     border: 2px solid #00ff7f;
-    border-radius: 5px 5px 0 0;
-    transition: height 0.3s ease;
+    border-radius: 5px;
     pointer-events: none;
 }
 
@@ -220,69 +219,65 @@ aside li:hover a {
     top: 0;
     left: 0;
     width: 100%;
-    height: 50%; /* Red overlay border also covers only the top half */
+    height: 100%; /* Red overlay border covers the entire item */
     border: 2px solid #ff3d3d;
-    border-radius: 5px 5px 0 0;
+    border-radius: 5px;
     opacity: 0.4;
-    transition: height 0.3s ease;
     pointer-events: none;
 }
 
 .category-item:hover:nth-child(1), .category-item:hover:nth-child(2), .category-item:hover:nth-child(3), .category-item:hover:nth-child(4), .category-item:hover:nth-child(5) {
     width: 100%;
-    background: url(./img/logo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.category-item:nth-child(1) {
+    background: url(../img/leoblur.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.category-item:hover {
-    background: gray;
-}
-
-.category-item:hover::before,
-.category-item:hover::after {
-    height: 100%; /* Border expands to full card height on hover */
-    border-radius: 5px; /* Full border radius on hover */
-}
 
 .category-img {
     width: 100%;
-    height: 75px; /* Half height before hover */
+    height: 120px; /* Adjusted height for new structure */
     object-fit: cover;
-    transition: height 0.3s ease;
+    border-radius: 5px;
+    cursor: pointer; /* Indicate the image is clickable */
 }
 
-.category-item:hover .category-img {
-    width: 100%;
-    height: 10px; /* Full height on hover */
-}
-
-.category-link {
-    display: block;
-    width: 100%;
-    padding: 5px;
-    text-align: center;
+.category-item p {
+    font-size: 1.1rem;
+    font-weight: 500;
     color: #d8d8d8;
-    text-decoration: none;
-    font-size: 1.2rem; /* Larger for emphasis */
-    font-weight: 600;
-    background: #1a1d28;
-    transition: background 0.2s ease, color 0.2s ease;
-    border-top: 1px solid white;
-    border-radius: 50px;
-    animation: glowText 1.5s ease-in-out infinite alternate; /* Add neon glow */
-    letter-spacing: 1px; /* Subtle spacing */
-    text-transform: uppercase; /* Uppercase for consistency */
+    text-align: center;
+    margin: 10px 0;
+    animation: glowText 1.5s ease-in-out infinite alternate;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
-.category-item:hover .category-link {
-    background: inherit;
-    color: white;
-    border: 1px white solid;
-    border-radius: 10px;
-    padding: 10px 0; /* Adjust padding for better spacing */
-    animation: none; /* Remove glow on hover for contrast */
+.category-button {
+    padding: 8px 16px;
+    background: #1a1d28;
+    border: 1px solid #00ff7f;
+    border-radius: 5px;
+    color: #d8d8d8;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+    animation: glowText 1.5s ease-in-out infinite alternate;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.category-item:hover .category-button {
+    background: #00ff7f;
+    color: #12151e;
+    animation: none;
 }
 
 /* Footer */
@@ -333,19 +328,19 @@ footer {
     }
 
     .category-img {
-        height: 90px; /* Half height for laptops */
-    }
-
-    .category-item:hover .category-img {
-        height: 180px; /* Full height on hover for laptops */
+        height: 150px; /* Larger image for laptops */
     }
 
     .category-item {
-        height: 230px; /* Adjusted for larger image height */
+        height: 260px; /* Adjusted for larger image height */
     }
 
-    .category-link {
-        font-size: 1.3rem; /* Larger for laptops */
+    .category-item p {
+        font-size: 1.2rem; /* Larger for laptops */
+    }
+
+    .category-button {
+        font-size: 1.1rem; /* Larger for laptops */
     }
 
     footer {
@@ -388,15 +383,20 @@ footer {
     }
 
     .category-img {
-        height: 60px; /* Half height for mobile */
-    }
-
-    .category-item:hover .category-img {
-        height: 120px; /* Full height on hover for mobile */
+        height: 100px; /* Smaller image for mobile */
     }
 
     .category-item {
-        height: 170px; /* Adjusted for smaller image height */
+        height: 200px; /* Adjusted for smaller image height */
+    }
+
+    .category-item p {
+        font-size: 0.9rem; /* Smaller for mobile */
+    }
+
+    .category-button {
+        font-size: 0.8rem; /* Smaller for mobile */
+        padding: 6px 12px; /* Adjust padding for mobile */
     }
 
     header h1, .asideh1 {
@@ -413,10 +413,6 @@ footer {
 
     .announcement p {
         font-size: 0.9rem; /* Smaller for mobile */
-    }
-
-    .category-link {
-        font-size: 1rem; /* Smaller for mobile */
     }
 
     footer {

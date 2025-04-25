@@ -4,14 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>XenzyShop</title>
-  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="main.css" />
+  <link rel="icon" href="../img/logo.jpg" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600&display=swap" rel="stylesheet" />
 </head>
 <body>
   <!-- Header -->
   <header>
     <div class="logo-title">
-      <img src="./img/logo.jpg" alt="Logo" class="logo" />
+      <img src="../img/logo.jpg" alt="Logo" class="logo" />
       <h1>XenzyShop</h1>
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     </div>
@@ -28,7 +29,8 @@
             <span style="font-size: 25px;" class="asideh1"><b>XenzyShop</span></b><br/><br/>
             <hr/>
           </div>
-      <li><a href="#">BloxFruit-Group</a></li>
+          <li><a href="../index.html">Home-Page</a></li>
+          <li><a href="#">BloxFruit-Group</a></li>
           <li><a href="#">Contant-Admins</a></li>
           <li><a href="#">Support</a></li>
         </ul>
@@ -44,34 +46,39 @@
 
       <section class="category">
         <div class="category-item">
-          <img src="./img/logo.jpg" alt="Category Image" class="category-img" />
-          <a href="./bloxfruitMain/index.html" class="category-link">BloxFruit-Main</a>
+          <img src="../img/main1.jpg" alt="BloxFruit-Main" class="category-img" onclick="enlargeImage(this)" />
+          <p>Price-100K<span style="color:green;">(Onstock)</span></p>
+       
+          <button class="category-button" onclick="window.location.href='bloxfruit-main.html'">BloxFruit-Main</button>
         </div>
         <div class="category-item">
-          <img src="./img/logo.jpg" alt="Category Image" class="category-img" />
-          <a href="#" class="category-link">BloxFruit-Mini</a>
-        </div>
-        <div class="category-item">
-            <img src="./img/logo.jpg" alt="Category Image" class="category-img" />
-            <a href="#" class="category-link">BloxFruit-Fruit</a>
+            <img src="../img/main1.jpg" alt="BloxFruit-Main" class="category-img" onclick="enlargeImage(this)" />
+            <p>Price-100K<span style="color:red;">(Out)</span></p>
+         
+            <button class="category-button" onclick="window.location.href='bloxfruit-main.html'">BloxFruit-Main</button>
           </div>
           <div class="category-item">
-            <img src="./img/logo.jpg" alt="Category Image" class="category-img" />
-            <a href="#" class="category-link">BloxFruit-Random </a>
+            <img src="../img/main1.jpg" alt="BloxFruit-Main" class="category-img" onclick="enlargeImage(this)" />
+            <p>Price-100K<span style="color:aqua;">(Coming Soon)</span></p>
+         
+            <button class="category-button" onclick="window.location.href='bloxfruit-main.html'">BloxFruit-Main</button>
           </div>
           <div class="category-item">
-            <img src="./img/logo.jpg" alt="Category Image" class="category-img" />
-            <a href="#" class="category-link">Robux</a>
+            <img src="../img/main1.jpg" alt="BloxFruit-Main" class="category-img" onclick="enlargeImage(this)" />
+            <p>Price-100K<span style="color:green;">(Onstock)</span></p>
+         
+            <button class="category-button" onclick="window.location.href='bloxfruit-main.html'">BloxFruit-Main</button>
           </div>
+       
       </section>
     </main>
   </div>
 
   <!-- Footer -->
   <footer>
-    © 2025 XenzyShop. All rights reserved.
+    © 2025 XenzyShop. All Rights Reserved.
   </footer>
 
-  <script src="home.js"></script>
+  <script src="./main.js"></script>
 </body>
 </html>
