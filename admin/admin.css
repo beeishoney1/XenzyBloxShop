@@ -182,7 +182,7 @@ aside li:hover a {
     letter-spacing: 0.5px; /* Subtle spacing */
 }
 
-/* Category Section */
+/* Category Section (Main Page) */
 .category {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -228,17 +228,15 @@ aside li:hover a {
 
 .category-item:hover:nth-child(1), .category-item:hover:nth-child(2), .category-item:hover:nth-child(3), .category-item:hover:nth-child(4), .category-item:hover:nth-child(5) {
     width: 100%;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.category-item:nth-child(1) {
-    background: url(../img/leoblur.jpg  );
+    background: url(./img/logo.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
+.category-item:hover {
+    background: gray;
+}
 
 .category-img {
     width: 100%;
@@ -275,6 +273,82 @@ aside li:hover a {
 }
 
 .category-item:hover .category-button {
+    background: #00ff7f;
+    color: #12151e;
+    animation: none;
+}
+
+/* Admin Info Section */
+.admin-info {
+    background: #1a1d28;
+    border-radius: 5px;
+    padding: 1.5rem;
+    border: 2px solid #00ff7f;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px; /* Limit width for better presentation */
+    margin: 0 auto; /* Center the section */
+}
+
+.admin-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #ff3d3d;
+    border-radius: 5px;
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.admin-photo {
+    width: 100px;
+    height: 170px;
+    object-fit: cover;
+    border-radius:10%; /* Circular photo */
+    border: 2px solid #00ff7f;
+    cursor: pointer; /* Indicate the image is clickable */
+    margin-bottom: 1rem;
+}
+.admin-info{
+    background:url(../img/photo_1_2025-04-25_15-33-33.jpg) no-repeat center center/cover;
+    width: 400px;
+    height: 500px;
+ 
+}
+
+.admin-info p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #d8d8d8;
+    text-align: center;
+    margin-bottom: 1rem;
+    animation: glowText 1.5s ease-in-out infinite alternate;
+    letter-spacing: 1px;
+}
+
+.admin-button {
+    padding: 8px 16px;
+    background: #1a1d28;
+    border: 1px solid #00ff7f;
+    border-radius: 5px;
+    color: #d8d8d8;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+    animation: glowText 1.5s ease-in-out infinite alternate;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 480px;
+
+}
+
+.admin-info:hover .admin-button {
     background: #00ff7f;
     color: #12151e;
     animation: none;
@@ -343,6 +417,19 @@ footer {
         font-size: 1.1rem; /* Larger for laptops */
     }
 
+    .admin-photo {
+        width: 180px;
+        height: 180px;
+    }
+
+    .admin-info p {
+        font-size: 1.2rem; /* Larger for laptops */
+    }
+
+    .admin-button {
+        font-size: 1.1rem; /* Larger for laptops */
+    }
+
     footer {
         font-size: 1.1rem; /* Larger for laptops */
     }
@@ -363,7 +450,7 @@ footer {
         top: 54px;
         left: -100%;
         width: 65%;
-        height: 500px;
+        height: calc(100vh - 54px);
         overflow-y: auto;
         transition: left 0.3s ease-in-out;
         z-index: 1000;
@@ -395,6 +482,20 @@ footer {
     }
 
     .category-button {
+        font-size: 0.8rem; /* Smaller for mobile */
+        padding: 6px 12px; /* Adjust padding for mobile */
+    }
+
+    .admin-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .admin-info p {
+        font-size: 0.9rem; /* Smaller for mobile */
+    }
+
+    .admin-button {
         font-size: 0.8rem; /* Smaller for mobile */
         padding: 6px 12px; /* Adjust padding for mobile */
     }

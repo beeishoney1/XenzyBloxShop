@@ -368,7 +368,7 @@ footer {
         top: 54px;
         left: -100%;
         width: 65%;
-        height: calc(100vh - 54px);
+        height: 500px;
         overflow-y: auto;
         transition: left 0.3s ease-in-out;
         z-index: 1000;
