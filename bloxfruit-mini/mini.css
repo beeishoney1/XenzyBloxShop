@@ -233,18 +233,11 @@ aside li:hover a {
     background-repeat: no-repeat;
 }
 .category-item:nth-child(1) {
-    background: url(../img/blurmain1.jpg);
+    background: url(../img/leoblur.jpg  );
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
-.category-item:nth-child(2) {
-    background: url(../img/blurmain2.jpg  );
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
 
 
 .category-img {
